@@ -1,5 +1,15 @@
 # UTMFW
 
+Firewall intrusions and 0 day exploits happen all the time. It is safe to assume that a firewall would be attacked. I am currently building a firewall that is designed to withstand basic exploits. 
+
+In my experiment I am using UTMFW (OpenBSD). In the firewall I removed the shell, ftp and basic commands (/bin) used to exploit a firewall. Everything necessary to run the firewall was loaded in memory before deleting on ramdisk.
+
+
+In the case of an intrusion, how likely is the attacker to take control of the firewall? Could something simple as removing commonly used commands, text editors, and compilers increase security?
+
+----------------------------------
+
+
 UTMFW is a UTM firewall running on OpenBSD. UTMFW is expected to be used on production systems. The UTMFW project provides a Web User Interface (WUI) for monitoring and configuration. You can also use the Android application [A4PFFW](https://github.com/sonertari/A4PFFW), which can display the notifications sent from UTMFW, and the Windows application [W4PFFW](https://github.com/sonertari/W4PFFW) for monitoring.
 
 UTMFW is an updated version of ComixWall. However, there are a few major changes, such as [SSLproxy](https://github.com/sonertari/SSLproxy), Snort Inline IPS, [PFRE](https://github.com/sonertari/PFRE), E2Guardian, many fixes and improvements to the system and the WUI, Firebase push notifications, and network user authentication. Also note that UTMFW 7.3 comes with OpenBSD 7.3-stable including all updates until April 26th, 2023.
